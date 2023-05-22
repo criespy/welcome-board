@@ -56,8 +56,8 @@
     </div>
     <div>
       <br><br><br><br><br>
-      <p class="text-end lead" id="tanggal">tanggal</p>
-      <p class="text-end lead" id="jam">jam</p>
+      <p class="text-end lead date" id="tanggal">tanggal</p>
+      <p class="text-end lead date" id="jam">{{ object.jam }}</p>
     </div>
     
     
@@ -96,11 +96,11 @@
   
     console.log(dateTimeString);
     document.getElementById("tanggal").innerText = dateTimeString;
-    document.getElementById("jam").innerText = jam;
+    //document.getElementById("jam").innerText = jam;
 
-    setInterval(function() {
-        displayDateTime(); // Memperbarui waktu setiap detik
-      }, 1000);
+    //setInterval(function() {
+    //    displayDateTime(); // Memperbarui waktu setiap detik
+    //  }, 1000);
 
   }
   

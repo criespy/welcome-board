@@ -5,6 +5,7 @@ class namaDisplay(models.Model):
     titlevip = models.CharField(max_length=128)
     namavip = models.CharField(max_length=64)
     perusahaan = models.CharField(max_length=128)
+    jam = models.TimeField()
 
     def get_absolute_url(self):
         return reverse('displayBoard', args=[str(self.id)])
