@@ -54,6 +54,11 @@
       <p><h2>{{ object.namavip }}</h2></p>
       <p><h2></h2></p>
     </div>
+    <div>
+      <br><br><br><br><br>
+      <p class="text-end lead" id="tanggal">tanggal</p>
+      <p class="text-end lead" id="jam">jam</p>
+    </div>
     
     
   </main>
@@ -66,4 +71,45 @@
 
     
   </body>
+<script>
+  function displayDateTime() {
+    var currentDate = new Date();
+  
+    //var days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var day = days[currentDate.getDay()];
+  
+    var date = currentDate.getDate();
+  
+    var month = currentDate.getMonth() + 1;
+  
+    var year = currentDate.getFullYear();
+  
+    var hours = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    var seconds = currentDate.getSeconds();
+  
+    var formattedTime = addZeroPadding(hours) + ":" + addZeroPadding(minutes) + ":" + addZeroPadding(seconds);
+  
+    var dateTimeString = day + ", " + date + "/" + month + "/" + year;
+    var jam = formattedTime;
+  
+    console.log(dateTimeString);
+    document.getElementById("tanggal").innerText = dateTimeString;
+    document.getElementById("jam").innerText = jam;
+
+    setInterval(function() {
+        displayDateTime(); // Memperbarui waktu setiap detik
+      }, 1000);
+
+  }
+  
+  function addZeroPadding(number) {
+    return (number < 10 ? "0" : "") + number;
+  }
+
+  displayDateTime();
+  
+  //displayDateTime();
+</script>
 </html>
