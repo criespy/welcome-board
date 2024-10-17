@@ -38,7 +38,7 @@
   <body class="d-flex h-100 text-center bg-light">
     
 <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-5">
+  <header>
     <div class="text-start">
       <img src="{% static 'fln_great.png' %}" width="300">
     </div>
@@ -47,17 +47,20 @@
   <main class="px-3">
     <div class="mb-5">
       <h1>Welcome to</h1>
-      <h1>PT. Frina Lestari Nusantara</h1>
+      <h2>PT. Frina Lestari Nusantara</h2>
     </div>
     <div class="mb-5">
+      <br>
       <p class="lead"><h3>{{ object.titlevip }} of {{ object.perusahaan }}</h3></p>
-      <p><h2>{{ object.namavip }}</h2></p>
+      <p><h1>{{ object.namavip }}</h1></p>
       <p><h2></h2></p>
     </div>
     <div>
-      <br><br><br><br>
+      <br><br><br>
+      <h3 style="font-size: 4rem">We are honored to have you visit our production facilities.</h3>
+      <br><br>
       <p class="text-end lead date" id="tanggal">tanggal</p>
-      <p class="text-end lead date" id="jam">{{ object.jam }}</p>
+      <!--p class="text-end lead date" id="jam">{{ object.jam }}</!--p-->
     </div>
     
     
