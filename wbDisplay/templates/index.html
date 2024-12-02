@@ -46,17 +46,18 @@
 
   <main class="px-3">
     <div class="mb-5">
-      <h1>Welcome to</h1>
-      <h2>PT. Frina Lestari Nusantara</h2>
+      <h1>Welcome</h1>
+      <p class="lead"><h2>{{ object.namavip }}, </h2></p>
+      <h3>{{ object.titlevip }} of </h3>
+      <h1>{{ object.perusahaan }}</h1>
     </div>
     <div class="mb-5">
-      <br>
-      <p class="lead"><h3>{{ object.titlevip }} of {{ object.perusahaan }}</h3></p>
-      <p><h1>{{ object.namavip }}</h1></p>
-      <p><h2></h2></p>
+    
+      <p><h2>to</h2></p>
+      <p><h2>PT. Frina Lestari Nusantara</h2></p>
     </div>
     <div>
-      <br><br><br>
+      <br>
       <h3 style="font-size: 4rem">We are honored to have you visit our production facilities.</h3>
       <br><br>
       <p class="text-end lead date" id="tanggal">tanggal</p>
@@ -82,7 +83,7 @@
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var day = days[currentDate.getDay()];
   
-    var date = currentDate.getDate();
+    var date = addZeroPadding(currentDate.getDate());
   
     var month = currentDate.getMonth() + 1;
   
@@ -94,7 +95,7 @@
   
     var formattedTime = addZeroPadding(hours) + ":" + addZeroPadding(minutes) + ":" + addZeroPadding(seconds);
   
-    var dateTimeString = day + ", " + date + "/" + month + "/" + year;
+    var dateTimeString = day + ", " + date + " / " + month + " / " + year;
     var jam = formattedTime;
   
     console.log(dateTimeString);
