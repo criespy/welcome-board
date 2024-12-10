@@ -47,9 +47,9 @@
   <main class="px-3">
     <div class="mb-5">
       <h1>Welcome</h1>
-      <p class="lead"><h2>{{ object.namavip }}, </h2></p>
-      <h3>{{ object.titlevip }} of </h3>
-      <h1>{{ object.perusahaan }}</h1>
+      <p class="lead"><h2>{{ object.namavip|default_if_none:"" }} </h2></p>
+      <h3>{{ object.titlevip|default_if_none:"" }} of </h3>
+      <h1>{{ object.perusahaan|default_if_none:"" }}</h1>
     </div>
     <div class="mb-5">
     
